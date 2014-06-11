@@ -3,7 +3,7 @@ A customizable Elasticsearch client ~~with Blaze templates~~
 
 Elasticity is a smart package for [meteor](https://www.meteor.com/) and [meteorite](https://github.com/oortcloud/meteorite/) that wraps around the [elasticsearchclient](https://github.com/phillro/node-elasticsearch-client) package for node.js.
 
-This package draws inspiration the [easy-search](http://atmospherejs.com/package/easy-search) package. My goal was to expose some additional functionality of Elasticsearch, and provide some other useful features while keeping it relatively simple to use.
+This package draws inspiration from the [easy-search](http://atmospherejs.com/package/easy-search) package. My goal was to expose some additional functionality of Elasticsearch, and provide some other useful features while keeping it relatively simple to use.
 
 ##Basic Usage
 
