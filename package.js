@@ -14,10 +14,12 @@ Npm.depends({
 
 Package.on_use(function (api) {
 	api.use(['underscore'], ['client', 'server']);
-	api.use(['templating', 'ui', 'jquery'], 'client');
+	api.use(['templating', 'ui', 'jquery', 'standard-app-packages'], 'client');
 
 	api.add_files([
 		'lib/elasticity-client.js',
+		'lib/templates/elasticity.html',
+		'lib/templates/elasticity.js',
 	], 'client');
 
 	api.add_files([

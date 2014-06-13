@@ -1,5 +1,5 @@
 #Elasticity
-A customizable Elasticsearch client ~~with Blaze templates~~
+A customizable Elasticsearch client with Blaze templates
 
 Elasticity is a smart package for [meteor](https://www.meteor.com/) and [meteorite](https://github.com/oortcloud/meteorite/) that wraps around the [elasticsearchclient](https://github.com/phillro/node-elasticsearch-client) package for node.js.
 
@@ -62,18 +62,18 @@ Elasticity.prototype.searches.my_cool_search = {
 
     return my_cool_query;
   },
-  
+
   formatter = function(data, collection, options) {
     // Parse the raw JSON string returned from Elasticsearch
     var results = JSON.parse(data);
-    
+
     var docs = [];
-    
+
     for(var i in results.hits.hits) {
       var hit = result.hits.hits[i];
       var id  = hit._id;
       var doc = Meteor[collection].findOne(id);
-      
+
       docs.push(doc);
     }
 
