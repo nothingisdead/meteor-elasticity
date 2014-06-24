@@ -7,9 +7,9 @@ Package.describe({
 });
 
 Npm.depends({
-	elasticsearchclient : '0.5.3',
-	promise             : '5.0.0',
-	flat                : '1.2.1'
+	elasticsearch : '2.2.0',
+	promise       : '5.0.0',
+	flat          : '1.2.1'
 });
 
 Package.on_use(function (api) {

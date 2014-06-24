@@ -1,7 +1,12 @@
 #Elasticity
 A customizable Elasticsearch client with Blaze templates
 
-Elasticity is a smart package for [meteor](https://www.meteor.com/) and [meteorite](https://github.com/oortcloud/meteorite/) that wraps around the [elasticsearchclient](https://github.com/phillro/node-elasticsearch-client) package for node.js.
+##Updates
+
+###0.0.5
+Switched underlying client to the official elasticsearch.js client
+
+Elasticity is a smart package for [meteor](https://www.meteor.com/) and [meteorite](https://github.com/oortcloud/meteorite/) that wraps around the [elasticsearch](https://github.com/elasticsearch/elasticsearch-js) package for node.js.
 
 This package draws inspiration from the [easy-search](http://atmospherejs.com/package/easy-search) package. My goal was to expose some additional functionality of Elasticsearch, and provide some other useful features while keeping it relatively simple to use.
 
@@ -22,7 +27,7 @@ var client = new Elasticity(config);
 
 // Create an index
 client.addIndex(Meteor.users, 'users', {
-	fields : ['profile.name.first', 'profile.name.last']
+  fields : ['profile.name.first', 'profile.name.last']
 });
 
 // Run a search
@@ -146,3 +151,4 @@ Flushing is turned off by default. Elasticity attempts to always provide the mos
 The solution is to set 'flush' to true, and 'flush_timeout' to the maximum time that you would like a query to be held in the queue for (the default is 200ms). This will force the query queue to be processed after that time, if it hasn't already been. My recommendation is to always turn on flushing *after* your indexes have been created.
 
 ###Todo: Blaze Templates
+There are currently two Blaze templates: es_input and es_result. More documentation coming as I finish them up.
