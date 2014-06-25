@@ -16,16 +16,20 @@ Package.on_use(function (api) {
 	api.use(['underscore'], ['client', 'server']);
 	api.use(['templating', 'ui', 'jquery', 'standard-app-packages'], 'client');
 
+	// Add search templates to both client and server
 	api.add_files([
-		'lib/elasticity-client.js',
+		'lib/search-templates.js'
+	], ['client', 'server']);
+
+	api.add_files([
+		'lib/client.js',
 		'lib/templates/elasticity.html',
 		'lib/templates/elasticity.js',
 	], 'client');
 
 	api.add_files([
-		'lib/elasticity-server.js',
-		'lib/searches/fuzzy.js'
+		'lib/server.js'
 	], 'server');
 
-	api.export('Elasticity');
+	api.export(['Elasticity', 'ElasticityTemplates']);
 });
