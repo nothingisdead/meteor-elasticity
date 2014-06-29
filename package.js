@@ -3,7 +3,7 @@
 'use strict';
 
 Package.describe({
-	summary : 'A customizable Elastic Search client with Blaze templates'
+	summary : 'A customizable Elastic Search client with Blaze Components'
 });
 
 Npm.depends({
