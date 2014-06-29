@@ -3,6 +3,9 @@ A customizable Elasticsearch client with Blaze templates
 
 ##Updates
 
+###0.1.0
+The package has undergone some major internal changes, and the syntax for calling most of the functions has changed. This file has been updated to reflect those changes.
+
 ###0.0.5
 Switched underlying client to the official elasticsearch.js client
 
