@@ -1,8 +1,0 @@
-{
-	"name"        : "elasticity",
-	"description" : "A customizable Elastic Search client with Blaze templates",
-	"homepage"    : "https://github.com/nothingisdead/meteor-elasticity",
-	"author"      : "Robert Myers",
-	"version"     : "0.1.0",
-	"git"         : "https://github.com/nothingisdead/meteor-elasticity.git"
-}

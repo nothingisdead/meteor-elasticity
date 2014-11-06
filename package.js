@@ -1,35 +1,29 @@
-/* global Package: true */
-
-'use strict';
+/* global Package : true */
+/* global Npm     : true */
 
 Package.describe({
-	summary : 'A customizable Elastic Search client with Blaze Components'
+	'name'    : 'elasticity',
+	'summary' : 'A customizable Elastic Search client with Blaze Components',
+	"version" : "1.0.0",
+	"git"     : "https://github.com/nothingisdead/meteor-elasticity.git"
 });
 
 Npm.depends({
-	elasticsearch : '2.2.0',
-	promise       : '5.0.0',
-	flat          : '1.2.1'
+	'elasticsearch' : '2.4.3'
 });
 
-Package.on_use(function (api) {
-	api.use(['underscore'], ['client', 'server']);
-	api.use(['templating', 'ui', 'jquery', 'standard-app-packages'], 'client');
-
-	// Add search templates to both client and server
-	api.add_files([
-		'lib/search-templates.js'
-	], ['client', 'server']);
-
-	api.add_files([
-		'lib/client.js',
-		'lib/templates/elasticity.html',
-		'lib/templates/elasticity.js',
-	], 'client');
+Package.onUse(function(api) {
+	api.use('meteor-platform');
+	api.use('reactive-var');
+	api.use("matb33:collection-hooks@0.7.6");
 
 	api.add_files([
 		'lib/server.js'
 	], 'server');
 
-	api.export(['Elasticity', 'ElasticityTemplates']);
+	api.add_files([
+		'lib/client.js',
+		'lib/templates/elasticity.html',
+		'lib/templates/elasticity.js'
+	], 'client');
 });
