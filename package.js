@@ -2,7 +2,7 @@
 /* global Npm     : true */
 
 Package.describe({
-	'name'    : 'elasticity',
+	'name'    : 'nothingisdead:elasticity',
 	'summary' : 'A customizable Elastic Search client with Blaze Components',
 	"version" : "1.0.0",
 	"git"     : "https://github.com/nothingisdead/meteor-elasticity.git"
@@ -13,8 +13,8 @@ Npm.depends({
 });
 
 Package.onUse(function(api) {
-	api.use('meteor-platform');
-	api.use('reactive-var');
+	api.use('meteor-platform@1.2.0');
+	api.use('reactive-var@1.0.3');
 	api.use("matb33:collection-hooks@0.7.6");
 
 	api.add_files([
